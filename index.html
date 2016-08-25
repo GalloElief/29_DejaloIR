@@ -9,9 +9,27 @@
 		<link rel="stylesheet" href="css/utilities.css">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	  	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="js/tagcanvas.min.js" type="text/javascript"></script>
+  	<!-- esfera -->
+		<script src="js/tagcanvas.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+			try {
+				TagCanvas.Start('myCanvas','tags',{
+				textColour: 'pink',
+				outlineColour: '#ff00ff',
+				reverse: true,
+				depth: 0.7,
+				maxSpeed: 0.06,
+			});
+			} catch(e) {
+				// something went wrong, hide the canvas container
+				document.getElementById('myCanvasContainer').style.display = 'none';
+			}};
+		</script><!-- fin de esfera -->
 	</head>
 	<body>
 		<header>
@@ -24,7 +42,7 @@
 								  <span class="sr-only">Menu</span>
 								  <span class="fa fa-navicon fa-2x"></span> <!-- icono de hamburguesa--> 
 								</button>
-								<img src="">
+								<img class="tamaño" src="img/dejaloir.jpg">
 							</div>
 							<div class="collapse navbar-collapse colorff" id="myNavbar">
 						    <ul class="nav navbar-nav navbar-right "><!-- elementos de mi navegador--> 
@@ -41,23 +59,62 @@
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
-						<img src="http://3.bp.blogspot.com/_rvET5aHw-1M/S-BR9H3M_XI/AAAAAAAAF2M/NFLBbubhUSo/s400/ESFERA.png">	
+					<div class="col-lg-6 col-xs-12">
+						<div id="myCanvasContainer">
+							<canvas id="myCanvas">
+								<p>Anything in here will be replaced on browsers that support the canvas element</p>
+							</canvas>
+						</div>
+						<div id="tags" class="letra">
+							<ul>
+								<li><a href="">Frustación</a></li>
+								<li><a href="">Desilusión</a></li>
+								<li><a href="">Disgusto</a></li>
+								<li><a href="">Confianza</a></li>
+								<li><a href="">Respeto</a></li>
+								<li><a href="">Problemas</a></li>
+								<li><a href="">Insatisfacción</a></li>
+								<li><a href="">Stress</a></li>
+								<li><a href="">Enojo</a></li>
+								<li><a href="">Distración</a></li>
+								<li><a href="">Tiempo</a></li>
+								<li><a href="">Administración</a></li>
+								<li><a href="">Rendimiento</a></li>
+								<li><a href="">Organización</a></li>
+								<li><a href="">Consecuencias</a></li>
+								<li><a href="">Intranquilidad</a></li>
+								<li><a href="">Imputualidad</a></li>
+								<li><a href="">Dirección</a></li>
+								<li><a href="">Revisar</a></li>
+								<li><a href="">Analizar</a></li>
+								<li><a href="">Optimizar</a></li>
+								<li><a href="">Calidad</a></li>
+								<li><a href="">Medida</a></li>
+								<li><a href="">Objetivos</a></li>
+								<li><a href="">Beneficios</a></li>
+								<li><a href="">Eficiencia</a></li>
+								<li><a href="">Planeación</a></li>
+								<li><a href="">Evaluación</a></li>
+								<li><a href="">Prioridades</a></li>
+								<li><a href="">Metas</a></li>
+							</ul>
+						</div>	
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 col-xs-12">
 						<div class="row">
               <div class="col-lg-12">
-								<div class="cp">pregunta1</div>
+								<div class="cp">El futuro tiene muchos nombres. Para los débiles es lo inalcanzable. Para los temerosos, lo desconocido. Para los valientes es la oportunidad.
+								Victor Hugo (1802-1885) Novelista francés.</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12">
-								<div class="cp">pregunta2</div>
+							<div class="col-lg-12 hidden-xs">
+								<div class="cp">Confía en el tiempo, que suele dar dulces salidas a muchas amargas dificultades.</div>
 							</div>	
 						</div>
 						<div class="row">
-							<div class="col-lg-12">
-								<div class="cp">pregunta3</div>
+							<div class="col-lg-12 hidden-xs">
+								<div class="cp">Pierde una hora por la mañana y la estarás buscando todo el día.</div>
 							</div>	
 						</div>
 					</div>
@@ -69,30 +126,157 @@
 				<div class="row">
 					<div class="col-lg-3">
 						<a href="https://trello.com"> 
-							<img class="tamlog bajar" src="logos/logo_trello.png">
+							<img class="tamlog padd img-responsive" src="logos/logo_trello.png">
 						</a>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Trello es un gestor de tareas que permite el trabajo de forma colaborativa mediante tableros compuestos de columnas (que representan distintos estados.</div>
+							</div>
+						</div>
 					</div>
 					<div class="col-lg-3">
 						<a href="https://asana.com">
-							<img class="tamlog bajar" src="logos/logo_asana.png">
+							<img class="tamlog padd img-responsive" src="logos/logo_asana.png">
 						</a>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Asana1 es una aplicación web y móvil diseñada para mejorar la comunicación y colaboración en equipo. </div>
+							</div>
+						</div>
 					</div>
 					<div class="col-lg-3">
 						<a href="https://www.zoho.com">
-							<img class="tamlog" src="logos/logo_zoho.jpg">
+							<img id="tamlog1" class=" img-responsive" src="logos/logo_zoho.jpg">
 						</a>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Zoho es el nombre de un conjunto de aplicaciones web desarrolladas por la empresa de la India ZOHO Corporation antes AdventNet.</div>
+							</div>
+						</div>
 					</div>
 					<div class="col-lg-3">
 						<a href="https://basecamp.com">
-							<img class="tamlog bajar" src="logos/logo_basecamp.png">
+							<img class="tamlog padd img-responsive" src="logos/logo_basecamp.png">
 						</a>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Basecamp es una popular herramienta que realiza funciones muy básicas que han sido optimizadas a lo largo de los años para gestionar y coordinar proyectos.
+</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="mover">
+							<img class="tamañof" src="fotos/elief_01.png" onmouseover="this.src='fotos/elief_2.jpg';" onmouseout="this.src='fotos/elief_01.png';"/>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Problemática</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Solución</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="mover">
+							<img class="tamañof img-responsive" src="fotos/IRMA_01.jpg" onmouseover="this.src='fotos/IRMA_02.jpg';" onmouseout="this.src='fotos/IRMA_01.jpg';"/>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Problemática</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Solución</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="mover">
+							<img class="tamañof img-responsive" src="fotos/EDITH_01.jpg" onmouseover="this.src='fotos/EDITH_2.jpg';" onmouseout="this.src='fotos/EDITH_01.jpg';"/>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Problematica</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="cp">Solución</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-						
-			
+		<footer>
+			<div class="container text-center">
+				<div class="row padd">
+					<div class="col-lg-12 " id="mover1">
+						<h2>Contactanos</h2>
+					</div>
+				</div>
+				<div class="row padd">
+					<div class="col-lg-2 col-xs-2 margg">
+						<p>Elief Gallo</p>
+						<span class="fa fa-phone fa-2x txtrosa" aria-hidden="true"></span><!-- icono de teléfono -->
+    				<p>55-2176-9621</p><!-- texto color rosa-->
+    				<span class="fa fa-envelope fa-2x txtrosa hidden-xs" aria-hidden="true"></span><!-- icono de correo -->
+    				<p class="hidden-xs">in_lovelieph@hotmail.com</p><!-- texto color rosa-->
+    			</div>
+					<div class="col-lg-2 col-xs-2 margg">
+						<p>Okaydi German</p>
+						<span class="fa fa-phone fa-2x txtrosa" aria-hidden="true"></span><!-- icono de teléfono -->
+    				<p>7471-5582-80</p><!-- texto color rosa-->
+    				<span class="fa fa-envelope fa-2x txtrosa hidden-xs" aria-hidden="true"></span><!-- icono de correo -->
+    				<p class="hidden-xs">okaydi.german@gmail.com</p><!-- texto color rosa-->
+    			</div>
+    			<div class="col-lg-2 col-xs-2 margg">
+						<p>Sandra Rodriguez</p>
+						<span class="fa fa-phone fa-2x txtrosa" aria-hidden="true"></span><!-- icono de teléfono -->
+    				<p>55-2947-5473</p><!-- texto color rosa-->
+    				<span class="fa fa-envelope fa-2x txtrosa hidden-xs" aria-hidden="true"></span><!-- icono de correo -->
+    				<p class="hidden-xs">san.rodz@gmail.com</p><!-- texto color rosa-->
+    			</div>
+    			<div class="clearfix visible-xs-block">
+          </div>
+    			<div class="col-lg-2 col-xs-2 margg">
+						<p>Edith Ramirez</p>
+						<span class="fa fa-phone fa-2x txtrosa" aria-hidden="true"></span><!-- icono de teléfono -->
+    				<p>55-1393-5898</p><!-- texto color rosa-->
+    				<span class="fa fa-envelope fa-2x txtrosa hidden-xs" aria-hidden="true"></span><!-- icono de correo -->
+    				<p class="hidden-xs">ediths.ramirez@gmail.com</p><!-- texto color rosa-->
+    			</div>
+    			<div class="col-lg-2 col-xs-2 margg">
+						<p>Irma Alcantar</p>
+						<span class="fa fa-phone fa-2x txtrosa" aria-hidden="true"></span><!-- icono de teléfono -->
+    				<p>55-3421-1627</p><!-- texto color rosa-->
+    				<span class="fa fa-envelope fa-2x txtrosa hidden-xs" aria-hidden="true"></span><!-- icono de correo -->
+    				<p class="hidden-xs">irma.alcantar.em@gmail.com</p><!-- texto color rosa-->
+    			</div>
+    			<div class="col-lg-2 col-xs-2 margg">
+						<p>Carmen Camacho</p>
+						<span class="fa fa-phone fa-2x txtrosa" aria-hidden="true"></span><!-- icono de teléfono -->
+    				<p>55-2345-8900</p><!-- texto color rosa-->
+    				<span class="fa fa-envelope fa-2x txtrosa hidden-xs" aria-hidden="true"></span><!-- icono de correo -->
+    				<p class="hidden-xs">carmen.camacho@gmail.com</p><!-- texto color rosa-->
+    			</div>
+    		</div>
+    	</div>	
+		</footer>
 		<!-- Incluir todos tus scripts apartir de este punto -->
 	  <!-- jQuery (necesario para que funcionen los componentes de Bootstrap) -->
+	  <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
